@@ -1,0 +1,70 @@
+version: "3"
+services:
+
+    selenium-hub:
+        image: selenium/hub:4.2.1-20220531
+        container_name: 'hub_SA'
+        ports:
+            - "4444:4444"
+    chrome:
+        image: selenium/node-chrome:4.2.1-20220531
+        container_name: 'chrome_SA'
+        depends_on:
+            - selenium-hub
+        environment:
+            - SE_EVENT_BUS_HOST=selenium-hub
+            - SE_EVENT_BUS_PUBLISH_PORT=4442
+            - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+        ports:
+            - "6900:5900"
+
+    edge:
+        image: selenium/node-edge:4.2.1-20220531
+        container_name: 'edge_SA'
+        depends_on:
+            - selenium-hub
+        environment:
+            - SE_EVENT_BUS_HOST=selenium-hub
+            - SE_EVENT_BUS_PUBLISH_PORT=4442
+            - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+        ports:
+            - "6901:5900"
+
+    firefox:
+        image: selenium/node-firefox:4.2.1-20220531
+        container_name: 'firefox_SA'
+        depends_on:
+            - selenium-hub
+        environment:
+            - SE_EVENT_BUS_HOST=selenium-hub
+            - SE_EVENT_BUS_PUBLISH_PORT=4442
+            - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+        ports:
+            - "6902:5900"
+
+    jenkins:
+        image: 'jenkins/jenkins:lts'
+        container_name: 'jenkins_SA'
+        ports:
+            - 8080:8080
+        volumes:
+            - C:\NEXT_volume\jenkins_home:/var/jenkins_home
+            - C:\NEXT_Volume\jenkins_config:/var/jenkins_config
+
+    appium_android_device:
+        image: appium/appium
+        ports:
+            - 4723: 4723
+        deponds_on:
+            - selenium-hub
+        privileged: true
+        volumes:
+            - /dev/bus/usb:/dev/bus/usb
+            - ~/.android:/root/.android
+            - /home/budi/Desktop/github/ui-testing/android/src/test/resources/apl:/opt
+        enviromment:
+            - CONNECT_TO_GRID=true
+            - SELENIUM_HOST=selnium_hub
+            - BROWSER_NAME=chrome
+
+

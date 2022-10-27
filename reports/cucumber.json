@@ -1,0 +1,99 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-06-04T15:18:53.991Z",
+        "line": 4,
+        "name": "login SF",
+        "description": "",
+        "id": "login;login-sf",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 84000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user launch chrome browser",
+            "match": {
+              "location": "com.test.stepdefination.loginSFSteps.user_launch_chrome_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3715000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User opens URL",
+            "match": {
+              "location": "com.test.stepdefination.loginSFSteps.user_opens_url()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2799000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Se connecter en tant que responsable RH sur SF avec email \"testDEV@talan.com\" et le mot de passe \"Talan1234!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"testDEV@talan.com\"",
+                  "offset": 58
+                },
+                {
+                  "val": "\"Talan1234!\"",
+                  "offset": 97
+                }
+              ],
+              "location": "com.test.stepdefination.loginSFSteps.se_connecter_en_tant_que_responsable_rh_sur_sf_avec_email_et_le_mot_de_passe(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 37146000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Click on login",
+            "match": {
+              "location": "com.test.stepdefination.loginSFSteps.click_on_login()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Test"
+          },
+          {
+            "name": "@LoginSF"
+          }
+        ]
+      }
+    ],
+    "name": "login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Login.feature",
+    "tags": [
+      {
+        "name": "@Test",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

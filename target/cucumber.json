@@ -1,0 +1,213 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-05-21T10:41:18.480Z",
+        "line": 4,
+        "name": "Add a new customer",
+        "description": "",
+        "id": "customers;add-a-new-customer",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat com.test.stepdefination.Steps.user_launch_chrome_browser(Steps.java:23)\r\n\tat ✽.user launch firefox browser(file:///C:/Users/Lenovo/Desktop/PFE/NEXT/src/test/resources/features/Login.feature:5)\r\n",
+              "duration": 90000000,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "user launch firefox browser",
+            "match": {
+              "location": "com.test.stepdefination.Steps.user_launch_chrome_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user enters email as \"admin@yourstore.com\" and password as \"admin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"admin@yourstore.com\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"admin\"",
+                  "offset": 59
+                }
+              ],
+              "location": "com.test.stepdefination.Steps.user_enters_email_as_and_password_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "click on login",
+            "match": {
+              "location": "com.test.stepdefination.Steps.click_on_login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user click on customers Menu",
+            "match": {
+              "location": "com.test.stepdefination.Steps.user_click_on_customers_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "click on customers Menu Item",
+            "match": {
+              "location": "com.test.stepdefination.Steps.click_on_customers_menu_item()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "click on Add new button",
+            "match": {
+              "location": "com.test.stepdefination.Steps.click_on_add_new_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "user can view Add new customer page",
+            "match": {
+              "location": "com.test.stepdefination.Steps.user_can_view_add_new_customer_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "user enters customers info",
+            "match": {
+              "location": "com.test.stepdefination.Steps.user_enters_customers_info()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "click on save button",
+            "match": {
+              "location": "com.test.stepdefination.Steps.click_on_save_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "user can view confirmation message \"The new customer has been added succesfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The new customer has been added succesfully\"",
+                  "offset": 35
+                }
+              ],
+              "location": "com.test.stepdefination.Steps.user_can_view_confirmation_message(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "Enter customer Email",
+            "match": {
+              "location": "com.test.stepdefination.Steps.enter_customer_email()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "click on search button",
+            "match": {
+              "location": "com.test.stepdefination.Steps.click_on_search_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "user should fond Email in the Search table",
+            "match": {
+              "location": "com.test.stepdefination.Steps.user_should_fond_email_in_the_search_table()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "close browserfeature",
+            "match": {
+              "location": "com.test.stepdefination.Steps.close_browserfeature()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Test"
+          },
+          {
+            "name": "@Login"
+          }
+        ]
+      }
+    ],
+    "name": "Customers",
+    "description": "",
+    "id": "customers",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Login.feature",
+    "tags": [
+      {
+        "name": "@Test",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
